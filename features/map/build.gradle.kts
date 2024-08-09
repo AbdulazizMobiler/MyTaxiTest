@@ -62,8 +62,8 @@ dependencies {
     implementation(libs.dagger.hilt.android)
     kapt(libs.dagger.hilt.compiler)
     implementation (libs.android.mapbox.map)
-    implementation("com.mapbox.extension:maps-compose:11.5.1")
-    implementation ("com.google.android.gms:play-services-location:21.3.0")
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.8.0")
+    implementation(libs.maps.compose)
+    implementation (libs.play.services.location)
+    implementation (libs.kotlinx.coroutines.play.services)
 
 }

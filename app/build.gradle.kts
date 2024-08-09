@@ -15,8 +15,9 @@ android {
         minSdk = 24
         targetSdk = 34
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1.0.1"
 
+        setProperty("archivesBaseName", "MyTaxy.Test-v$versionCode($versionName)")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
@@ -73,11 +74,10 @@ dependencies {
     implementation(libs.dagger.hilt.android)
     kapt(libs.dagger.hilt.compiler)
     implementation(libs.androidx.compose.runtime.tracing)
-//    implementation (libs.android.mapbox.map)
-    implementation("com.mapbox.maps:android:11.5.1")
-    implementation("com.mapbox.extension:maps-compose:11.5.1")
-    implementation ("com.google.android.gms:play-services-location:21.3.0")
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.8.0")
+    implementation (libs.android.mapbox.map)
+    implementation(libs.maps.compose)
+    implementation (libs.play.services.location)
+    implementation (libs.kotlinx.coroutines.play.services)
     implementation(project(":features:map"))
     implementation(project(":data"))
     implementation(project(":database"))

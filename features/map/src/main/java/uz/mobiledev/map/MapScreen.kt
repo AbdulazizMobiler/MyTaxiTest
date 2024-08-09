@@ -486,7 +486,6 @@ internal fun AppBar(
                     Text(
                         text = "Faol",
                         fontSize = 17.sp,
-                        color = if (isActive.value) Color.Black else MaterialTheme.colorScheme.onPrimary,
                         fontStyle = FontStyle.Normal,
                         fontWeight = FontWeight(if (isActive.value) 700 else 400),
                         fontFamily = FontFamily(Font(R.font.lato))
@@ -649,7 +648,7 @@ internal fun MenuItem(icon: Int, title: String, info: String, onClick: () -> Uni
             fontWeight = FontWeight.Medium,
             modifier = Modifier.weight(1f),
             fontFamily = FontFamily(Font(R.font.lato)),
-            color = Color(0xFF121212),
+            color = MaterialTheme.colorScheme.onSecondary,
         )
         Text(
             text = info,
